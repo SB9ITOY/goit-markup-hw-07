@@ -91,12 +91,12 @@ img {
     color: var(--blackcolor);
 }
 /* all nav */
-.nav-flex{
+.navigation{
     display: flex;
     align-items: center;
 }
 /* ----------site nav---------- */
-.site-nav {
+.navigation__list {
     display: flex;
     margin-left: 93px;
     font-weight: 500;
@@ -104,10 +104,10 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.site-nav .item+.item {
+.navigation__list .navigation__item + .navigation__item {
     margin-left: 50px;
 }
-.header-link{
+.navigation__link{
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
@@ -115,15 +115,15 @@ img {
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-link:hover,
-.header-link:focus{
+.navigation__link:hover,
+.navigation__link:focus{
     color: var(--accent-color);
 }
-.header-link.current{
+.navigation__link.current{
     color: var(--accent-color);
 }
 
-.header-link.current::after {
+.navigation__link.current::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -139,15 +139,15 @@ img {
 
 
 /* --------auth nav--------- */
-.auth-nav{
+.authnavigation{
     display: flex;
     margin-left: auto;
     align-items: center;
 }
-.auth-nav .item+.item {
+.authnavigation .authnavigation__item + .authnavigation__item {
     margin-left: 50px;
 }
-.header-number-link{
+.authnavigation__link{
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -159,11 +159,11 @@ img {
     color: var(--title-text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-number-link:hover,
-.header-number-link:focus{
+.authnavigation__link:hover,
+.authnavigation__link:focus{
     color: var(--accent-color);
 }
-.num-email-icon{
+.authnabigation__icon{
     margin-right: 10px;
     fill: currentColor;
 }
@@ -182,7 +182,7 @@ img {
     padding-bottom: 200px;
     text-align: center;
 }
-.decision {
+.hero__decision {
     width: 696px;
     text-align: center;
     font-weight: 900;
@@ -193,7 +193,7 @@ img {
     color: var(--whitecolor);
     margin: 0 auto;
 }
-.services-button {
+.hero__button {
     display: inline-block;
     cursor: pointer;
 
@@ -213,8 +213,8 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.services-button:hover,
-.services-button:focus {
+.hero__button:hover,
+.hero__button:focus {
     background-color: #188CE8;
     color: var(--whitecolor);
 }
@@ -235,7 +235,7 @@ img {
     visibility: hidden;
     pointer-events: none;
 }
-.modal-wrapper{
+.modal__wrapper{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -249,15 +249,15 @@ img {
     border-radius: 4px;
     transition: transform 300ms, ease-in-out 300ms, opacity 300ms ease-in-out 300ms;
 }
-.backdrop.is-hidden .modal-wrapper{
+.backdrop.is-hidden .modal__wrapper{
     transform: translate(-50%, -50%) scale(.4);
     opacity: 0;
 }
-.backdrop .modal-wrapper{
+.backdrop .modal__wrapper{
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
-.modal-btn{
+.modal__btn{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -275,12 +275,12 @@ img {
 
     cursor: pointer;
 }
-.modal-btn:hover .close-icon{
+.modal__btn:hover .close__icon{
     fill: var(--accent-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* --------------------modal form------------------- */
- .form-title{
+ .form__title{
     display: block;
     font-weight: 700;
     font-size: 20px;
@@ -289,7 +289,22 @@ img {
 
     color: var(--primary-text-color);
  }
- .form-modal-label{
+ .form__group{
+    position: relative;
+ }
+ .form__group{
+    display: block;
+    margin-bottom: 10px;
+ }
+ .form__group:focus-within .form__input,
+ .form__group:hover .form__input{
+    border-color: var(--accent-color);
+ }
+ .form__group:focus-within .form__icon,
+ .form__group:hover .form__icon{
+    fill: var(--accent-color);
+ }
+ .form__label{
     display: block;
     font-weight: 400;
     font-size: 12px;
@@ -300,7 +315,7 @@ img {
     
     color: var(--title-text-color);
  }
- .form-modal-input{
+ .form__input{
     width: 100%;
     padding: 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -309,29 +324,13 @@ img {
     color: var(--primary-text-color);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
- .form-icon{
+ .form__icon{
     position: absolute;
     bottom: 12px;
     left: 12px;
 
     fill: var(--primary-text-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
-
- .form-group{
-    position: relative;
- }
- .form-group{
-    display: block;
-    margin-bottom: 10px;
- }
- .form-group:focus-within .form-modal-input,
- .form-group:hover .form-modal-input{
-    border-color: var(--accent-color);
- }
- .form-group:focus-within .form-icon,
- .form-group:hover .form-icon{
-    fill: var(--accent-color);
  }
  /* ------------------feedback-------------------- */
  .feedback{
@@ -350,13 +349,13 @@ img {
     border-color: var(--accent-color);
  }
  /* ---------------------checkbox-------------------- */
- .form-policy-group{
+ .policy__group{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
  }
- .custom-checkbox-icon{
+ .checkbox__icon{
     width: 16px;
     height: 15px;
     margin-right: 8px;
@@ -372,23 +371,23 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
- .custom-checkbox-icon:hover,
- .custom-checkbox-icon:focus{
+ .checkbox__icon:hover,
+ .checkbox__icon:focus{
     outline-color: var(--accent-color);
  }
- .checkbox:checked + .custom-checkbox-icon {
+ .checkbox:checked + .checkbox__icon {
     background-color: var(--accent-color);
     fill: var(--blackcolor);
     outline: none;
  }
- .form-policy-desc{
+ .policy__desc{
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
 
     color: var(--title-text-color);
  }
- .form-policy-window{
+ .policy__window{
     margin-left: 3px;
     font-weight: 400;
     font-size: 14px;
@@ -398,7 +397,7 @@ img {
     color: var(--accent-color);
  }
  /* --------------------form button------------------ */
- .form-button{
+ .form__button{
     background-color: var(--accent-color);
     font-weight: 700;
     font-size: 16px;
@@ -413,8 +412,8 @@ img {
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
- .form-button:hover,
- .form-button:focus {
+ .form__button:hover,
+ .form__button:focus {
     background-color: #188CE8;
     color: var(--whitecolor);
 }
@@ -422,11 +421,11 @@ img {
 .menu{
     padding: 94px 0;
 }
-.work-exp{
+.work__list{
     display: flex;
     gap: var(--indent);
 }
-.exp-link{
+.work__link{
     display: flex;
     align-items: center;
     justify-content: center;

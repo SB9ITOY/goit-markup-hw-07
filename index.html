@@ -20,40 +20,40 @@
    
 <!-- main header -->
 <header>
-<div class="container">
-    <nav class="nav-flex">
+<div class="container header__container">
+    <nav class="navigation">
         <!-- main logo -->
         <a class="studio link" href=""><span class="web link">Web</span>Studio</a>
         <!-- main list -->
     
-        <ul class="site-nav list">
+        <ul class="navigation__list list">
 
-            <li class="item">
-                <a class="header-link current link" href="./index.html">Студия</a>
+            <li class="navigation__item">
+                <a class="navigation__link current link" href="./index.html">Студия</a>
             </li>
 
-            <li class="item">
-                <a class="header-link link" href="./portfolio.html">Портфолио</a>
+            <li class="navigation__item">
+                <a class="navigation__link link" href="./portfolio.html">Портфолио</a>
             </li>
 
-            <li class="item">
-                <a class="header-link link" href="">Контакты</a>
+            <li class="navigation__item">
+                <a class="navigation__link link" href="">Контакты</a>
             </li>
 
         </ul>
         <!-- main gmail and number -->
-        <ul class="auth-nav list">
+        <ul class="authnavigation list">
 
-            <li class="item">
-                <a class="header-number-link link" href="mailto:info@devstudio.com">
-                <svg class="num-email-icon" width="16" height="12">
+            <li class="authnavigation__item">
+                <a class="authnavigation__link link" href="mailto:info@devstudio.com">
+                <svg class="authnabigation__icon" width="16" height="12">
                     <use href="./image/icons.svg/sprite.svg#icon-envelope"></use>
                 </svg> info@devstudio.com</a>
             </li>
 
-            <li class="item">
-                <a class="header-number-link link" href="tel:+380961111111">
-                <svg class="num-email-icon" width="10" height="16">
+            <li class="authnavigation__item">
+                <a class="authnavigation__link link" href="tel:+380961111111">
+                <svg class="authnabigation__icon" width="10" height="16">
                     <use href="./image/icons.svg/sprite.svg#icon-smartphone"></use>
                 </svg>+380961111111</a>
             </li>
@@ -68,58 +68,55 @@
     <!-- HERO -->
 <section class="hero">
     <div class="container">
-        <h1 class="decision">Эффективные решения для вашего бизнеса</h1>
-        <button class="services-button" type="button"data-modal-open>Заказать услугу</button>
+        <h1 class="hero__decision">Эффективные решения для вашего бизнеса</h1>
+        <button class="hero__button" type="button"data-modal-open>Заказать услугу</button>
         <div class="backdrop is-hidden" data-modal>
-            <div class="modal-wrapper">
+            <div class="modal__wrapper">
 
-                <button class="modal-btn" type="button" data-modal-close>
-                   <svg class="close-icon" width="11" height="11">
+                <button class="modal__btn" type="button" data-modal-close>
+                   <svg class="close__icon" width="11" height="11">
                        <use href="./image/icons.svg/sprite.svg#icon-close"></use>
                    </svg>
                 </button>
 
-                <strong class="form-title">Оставьте свои данные, мы вам перезвоним</strong>
-                <form class="modal-form">
+                <strong class="form__title">Оставьте свои данные, мы вам перезвоним</strong>
+                    <form class="modal__form">
 
-                    <label class="form-group">
-                        <span class="form-modal-label">Имя</span>
-                        <input class="form-modal-input" type="text" name="user-name" required>
-                        <svg class="form-icon" width="18" height="18">
-                            <use href="./image/icons.svg/sprite.svg#icon-person"></use>
-                        </svg>
-                    </label>
-                    <label class="form-group">
-                        <span class="form-modal-label">Телефон</span>
-                        <input class="form-modal-input" type="number" name="user-phone" required>
-                        <svg class="form-icon" width="18" height="18">
-                            <use href="./image/icons.svg/sprite.svg#icon-phone-blank"></use>
-                        </svg>
-                    </label>
-                    <label class="form-group">
-                        <span class="form-modal-label">Почта</span>
-                        <input class="form-modal-input" type="email" name="user-email" required>
-                        <svg class="form-icon" width="18" height="18">
-                            <use href="./image/icons.svg/sprite.svg#icon-email-blank"></use>
-                        </svg>
-                    </label>
-                    
-                    <label class="form-feedback">
-                        <span class="form-modal-label">Комментарий</span>
-                        <textarea class="feedback" name="feedback" placeholder="Введите текст" required></textarea>
-                    </label>
-
-                    <label class="form-policy-group">
-                        <input class="checkbox visually-hidden" type="checkbox" required>
-                            <svg class="custom-checkbox-icon" width="11" height="8">
-                                <use href="./image/icons.svg/sprite.svg#icon-checkbox"></use>
+                        <label class="form__group">
+                            <span class="form__label">Имя</span>
+                            <input class="form__input" type="text" name="user-name" required>
+                            <svg class="form__icon" width="18" height="18">
+                                <use href="./image/icons.svg/sprite.svg#icon-person"></use>
                             </svg>
-                        <span class="form-policy-desc">Соглашаюсь с рассылкой и принимаю<span class="form-policy-window">Условия договора</span></span>
-                    </label>
-
-                    <button class="form-button" 
-                    type="submit">Отправить</button>
-                </form>
+                        </label>
+                        <label class="form__group">
+                            <span class="form__label">Телефон</span>
+                            <input class="form__input" type="number" name="user-phone" required>
+                            <svg class="form__icon" width="18" height="18">
+                                <use href="./image/icons.svg/sprite.svg#icon-phone-blank"></use>
+                            </svg>
+                        </label>
+                        <label class="form__group">
+                            <span class="form__label">Почта</span>
+                            <input class="form__input" type="email" name="user-email" required>
+                            <svg class="form__icon" width="18" height="18">
+                                <use href="./image/icons.svg/sprite.svg#icon-email-blank"></use>
+                            </svg>
+                        </label>                  
+                        <label class="form__feedback">
+                            <span class="form__label">Комментарий</span>
+                            <textarea class="feedback" name="feedback" placeholder="Введите текст" required></textarea>
+                        </label>
+                        <label class="policy__group">
+                            <input class="checkbox visually-hidden" type="checkbox" required>
+                                <svg class="checkbox__icon" width="11" height="8">
+                                    <use href="./image/icons.svg/sprite.svg#icon-checkbox"></use>
+                                </svg>
+                            <span class="policy__desc">Соглашаюсь с рассылкой и принимаю<span class="policy__window">Условия договора</span></span>
+                        </label>
+                        <button class="form__button" 
+                        type="submit">Отправить</button>
+                    </form>
             </div>
         </div>
     </div>
@@ -128,11 +125,11 @@
 <section class="menu">
     <div class="container">
         <h2 class="visually-hidden">Наши приемущества</h2>
-        <ul class="work-exp list">
+        <ul class="work__list list">
 
-            <li class="grid-item">
-                <a class="exp-link" href="">
-                    <svg class="exp-icon" width="70"   height="70">
+            <li class="work__item">
+                <a class="work__link" href="">
+                    <svg class="work__icon" width="70"   height="70">
                         <use href="./image/icons.svg/sprite.svg#icon-antenna"></use>
                     </svg>
                 </a>
@@ -140,9 +137,9 @@
                 <p class="p-Benefits">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
             </li>
         
-            <li class="grid-item">
-                <a class="exp-link" href="">
-                    <svg class="exp-icon" width="70"   height="70">
+            <li class="work__item">
+                <a class="work__link" href="">
+                    <svg class="work__icon" width="70"   height="70">
                         <use href="./image/icons.svg/sprite.svg#icon-clock"></use>
                     </svg>
                 </a>
@@ -150,9 +147,9 @@
                 <p class="p-Benefits">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
             </li>
         
-            <li class="grid-item">
-                <a class="exp-link" href="">
-                    <svg class="exp-icon" width="70"   height="70">
+            <li class="work__item">
+                <a class="work__link" href="">
+                    <svg class="work__icon" width="70"   height="70">
                         <use href="./image/icons.svg/sprite.svg#icon-diagram"></use>
                     </svg>
                 </a>
@@ -160,9 +157,9 @@
                 <p class="p-Benefits">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
             </li>
         
-            <li class="grid-item">
-                <a class="exp-link" href="">
-                    <svg class="exp-icon" width="70"   height="70">
+            <li class="work__item">
+                <a class="work__link" href="">
+                    <svg class="work__icon" width="70"   height="70">
                         <use href="./image/icons.svg/sprite.svg#icon-astronaut"></use>
                     </svg>
                 </a>
