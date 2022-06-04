@@ -421,7 +421,7 @@ img {
 .menu{
     padding: 94px 0;
 }
-.work__list{
+.work{
     display: flex;
     gap: var(--indent);
 }
@@ -438,7 +438,7 @@ img {
     border-radius: 4px;
 }
 
-.h3-Benefits {
+.BenefitsH{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -446,7 +446,7 @@ img {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.p-Benefits {
+.BenefitsP{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -456,10 +456,14 @@ img {
 .our-job{
     padding-bottom: 94px;
 }
-.our-item{
+.our{
+    display: flex;
+    gap: var(--indent);
+}
+.our__item{
     position: relative;
 }
-.our-item .item{
+.our__item .liners__item{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -477,17 +481,13 @@ img {
     color: var(--whitecolor);
     background-color: rgba(47, 48, 58, 0.8);
 }
-.work {
+.our-work {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     margin-bottom: 50px;
     text-align: center;
-}
-.our-work{
-    display: flex;
-    gap: var(--indent);
 }
 .button-menu-p{
     margin-bottom: 34px;
@@ -497,7 +497,7 @@ img {
     background-color: var(--button-color);
     padding: 94px 0;
 }
-.team{
+.our-team{
     margin-bottom: 50px;
     font-size: 36px;
     text-align: center;
@@ -506,20 +506,20 @@ img {
     color: var(--primary-text-color);
 }
 
-.tema-list{
+.tema{
     display: flex;
     gap: var(--indent);
 }
-.tema-list .item{
+.tema .team__item{
     background-color: var(--whitecolor);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-.name-position{
+.team__form{
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.name-team{
+.team__name{
     margin-bottom: 10px;
     text-align: center;
     font-weight: 500;
@@ -542,7 +542,7 @@ img {
     justify-content: center;
     gap: 10px;
 }
-.socials-link{
+.socials__link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -552,16 +552,16 @@ img {
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.socials-link:hover,
-.socials-link:focus{
+.socials__link:hover,
+.socials__link:focus{
     background-color: var(--accent-color);
 }
-.socials-icon{
+.socials__icon{
     fill: var(--clients-logo);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon{
+.socials__link:hover .socials__icon,
+.socials__link:focus .socials__icon{
     fill: var(--whitecolor);
 }
 /* -----------clients block------------ */
